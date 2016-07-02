@@ -1,0 +1,17 @@
+{
+  "name": "fichas-lectoras",
+  "version": "0.0.1",
+  "description": "App para manejar fichas de lectura y referencias",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JJOL",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.5.3"
+  }
+}
