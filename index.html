@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+  div {
+    font-size: 24px;
+    font-family: arial, sans-serif;
+  }
+</style>
+<title>APA Reference Maker</title>
+</head>
+
+<body>
+
+
+<span>Author: </span>
+<input type="text" id="author">
+<span>Date: </span>
+<input type="text" id="date">
+<span>Title: </span>
+<input type="text" id="title">
+<span>URL: </span>
+<input type="text" id="url">
+<button onclick="process()">Get Reference</button>
+<div id="result"></div>
+<script>
+  
+  var author = document.getElementById('author'),
+      date = document.getElementById('date'),
+      title = document.getElementById('title'),
+      url = document.getElementById('url');
+
+
+  var txt = document.getElementById("result");
+
+  function process() {
+    txt.innerHTML = author.value + " (" + date.value + ") " + title.value + ". Obtained from " + url.value;
+  }
+
+
+  txt.addEventListener('copy', function(e) {
+  	e.clipboardData.setData('text/plain', txt.innerHTML);
+	e.preventDefault();
+  });
+</script>
+</body>
+</html>
